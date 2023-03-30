@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h1>{{menu_object.name}}</h1>
+{% if menu_object.parent.name != "_root" %}
+    <a href="{{menu_object.parent.get_absolute_url}}">{{menu_object.parent}}</a>
+{% endif %}
+
+
+{% endblock body %}
